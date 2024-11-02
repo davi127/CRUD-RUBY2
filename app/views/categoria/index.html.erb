@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Categoria" %>
+<!-- Botón para volver a la página principal -->
+<div class="back-button-container">
+  <%= link_to "Volver a Inicio", root_path, class: "boton" %>
+</div>
+
+<h1>Categoría</h1>
+
+<div id="categoria">
+  <% @categoria.each do |categorium| %>
+    <%= render categorium %>
+    <p>
+      <%= link_to "Ver categoría", categorium, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nueva categoría", new_categorium_path, class: "boton" %>

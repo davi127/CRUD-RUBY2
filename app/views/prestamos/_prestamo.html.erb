@@ -1,0 +1,24 @@
+<div id="<%= dom_id prestamo %>" class="usuario-info-container">
+  <table class="usuario-info-table">
+    <tr>
+      <th>Usuario</th>
+      <td><%= prestamo.usuario.nombre %></td>
+    </tr>
+    <tr>
+      <th>Libro</th>
+      <td><%= prestamo.libro.titulo %></td>
+    </tr>
+    <tr>
+      <th>Fecha préstamo</th>
+      <td><%= prestamo.fecha_prestamo %></td>
+    </tr>
+    <tr>
+      <th>Fecha devolución</th>
+      <td><%= prestamo.fecha_devolucion %></td>
+    </tr>
+    <tr>
+      <th>Estado</th>
+      <td><%= prestamo.estado %></td>
+    </tr>
+  </table>
+</div>

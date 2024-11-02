@@ -1,0 +1,41 @@
+<%= form_with(model: categorium, class: "form-container") do |form| %>
+  <% if categorium.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(categorium.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <ul>
+        <% categorium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :nombre, class: "form-label" %>
+    <%= form.text_field :nombre, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :descripcion, class: "form-label" %>
+    <%= form.text_area :descripcion, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_creacion, class: "form-label" %>
+    <%= form.date_field :fecha_creacion, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :nivel, class: "form-label" %>
+    <%= form.number_field :nivel, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :estado, class: "form-label" %>
+    <%= form.text_field :estado, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Guardar", class: "boton" %>
+  </div>
+<% end %>

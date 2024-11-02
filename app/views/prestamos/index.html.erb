@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Prestamos" %>
+<!-- Botón para volver a la página principal -->
+<div class="back-button-container">
+  <%= link_to "Volver a Inicio", root_path, class: "boton" %>
+</div>
+<h1>Préstamos</h1>
+
+<div id="prestamos">
+  <% @prestamos.each do |prestamo| %>
+    <%= render prestamo %>
+    <p>
+      <%= link_to "Ver prestamo", prestamo, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo prestamo", new_prestamo_path, class: "boton" %>

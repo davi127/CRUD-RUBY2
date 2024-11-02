@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Autors" %>
+<!-- Botón para volver a la página principal -->
+<div class="back-button-container">
+  <%= link_to "Volver a Inicio", root_path, class: "boton" %>
+</div>
+
+<h1>Autores</h1>
+
+<div id="autors">
+  <% @autors.each do |autor| %>
+    <%= render autor %>
+    <p>
+      <%= link_to "Ver autor", autor, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo autor", new_autor_path, class: "boton" %>

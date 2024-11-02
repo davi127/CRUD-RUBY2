@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @resena %>
+
+<div>
+  <%= link_to "Editar reseña", edit_resena_path(@resena), class: "btn" %> |
+  <%= link_to "Ver reseñas", resenas_path, class: "btn" %>
+  </br></br>
+  <%= button_to "Eliminar reseña", @resena, method: :delete, class: "boton" %>
+</div>

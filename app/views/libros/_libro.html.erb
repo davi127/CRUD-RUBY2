@@ -1,0 +1,24 @@
+<div id="<%= dom_id libro %>" class="usuario-info-container">
+  <table class="usuario-info-table">
+    <tr>
+      <th>Título</th>
+      <td><%= libro.titulo %></td>
+    </tr>
+    <tr>
+      <th>ISBN</th>
+      <td><%= libro.isbn %></td>
+    </tr>
+    <tr>
+      <th>Año publicación</th>
+      <td><%= libro.anio_publicacion %></td>
+    </tr>
+    <tr>
+      <th>Autor</th>
+      <td><%= libro.autor.nombre %></td>
+    </tr>
+    <tr>
+      <th>Categoría</th>
+      <td><%= libro.categoria.nombre %></td>
+    </tr>
+  </table>
+</div>

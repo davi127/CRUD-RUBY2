@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #282c34; /* Fondo oscuro */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.usuario-info-container {
+    max-width: 350px;
+    padding: 30px;
+    background-color: #3b3f4c; /* Fondo gris oscuro */
+    border-left: 5px solid #f77824; /* Barra de color azul claro */
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    color: #e0e0e0;
+    margin: 20px auto;
+}
+
+.usuario-info-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px; /* Espaciado entre filas */
+}
+
+.usuario-info-table th,
+.usuario-info-table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.usuario-info-table th {
+    background-color: #f77824; /* Azul claro */
+    color: #282c34; /* Texto oscuro */
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.usuario-info-table td {
+    background-color: #4a4f5e; /* Fondo gris más oscuro */
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.usuario-info-table tr td:first-child {
+    font-weight: 500;
+    color: #f77824; /* Azul claro */
+}
+
+.usuario-info-table tr:not(:last-child) td {
+    border-bottom: none;
+}

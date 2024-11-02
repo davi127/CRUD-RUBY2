@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Libros" %>
+<!-- Botón para volver a la página principal -->
+<div class="back-button-container">
+  <%= link_to "Volver a Inicio", root_path, class: "boton" %>
+</div>
+
+<h1>Libros</h1>
+
+<div id="libros">
+  <% @libros.each do |libro| %>
+    <%= render libro %>
+    <p>
+      <%= link_to "Ver libro", libro, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo libro", new_libro_path, class: "boton" %>

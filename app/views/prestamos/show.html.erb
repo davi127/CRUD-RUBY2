@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @prestamo %>
+
+<div>
+  <%= link_to "Editar préstamo", edit_prestamo_path(@prestamo), class: "btn" %> |
+  <%= link_to "Ver lista", prestamos_path, class: "btn" %>
+  </br></br>
+  <%= button_to "Eliminar préstamo", @prestamo, method: :delete, class: "boton" %>
+</div>

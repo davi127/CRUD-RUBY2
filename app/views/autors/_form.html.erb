@@ -1,0 +1,41 @@
+<%= form_with(model: autor, class: "form-container") do |form| %>
+  <% if autor.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(autor.errors.count, "error") %> prohibited this author from being saved:</h2>
+      <ul>
+        <% autor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :nombre, class: "form-label" %>
+    <%= form.text_field :nombre, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pais, class: "form-label" %>
+    <%= form.text_field :pais, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :biografia, class: "form-label" %>
+    <%= form.text_area :biografia, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_nacimiento, class: "form-label" %>
+    <%= form.date_field :fecha_nacimiento, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_fallecimiento, class: "form-label" %>
+    <%= form.date_field :fecha_fallecimiento, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Guardar", class: "btn-primary" %>
+  </div>
+<% end %>

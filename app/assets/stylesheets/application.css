@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3f2fd; /* Fondo azul claro */
+    color: #1c1c1c; /* Texto oscuro */
+    min-height: 100vh;
+    justify-content: flex-start;
+    overflow: hidden; /* Evita el scroll por si hay un desbordamiento */
+}
+
+h1, h2, h3 {
+    color: #1976d2; /* Azul más intenso */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Efecto de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 95%;
+    max-width: 1000px; /* Ajusta el ancho máximo del contenedor */
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en una fila */
+}
+
+.boton-inicio {
+    padding: 15px 35px;
+    color: #ffffff;
+    background-color: #ff5722; /* Naranja vibrante */
+    border-radius: 50px; /* Bordes redondeados */
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+    box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+}
+
+.boton-inicio:hover {
+    background-color: #e64a19; /* Naranja más oscuro al hacer hover */
+    transform: translateY(-2px) rotate(3deg); /* Levantar y rotar ligeramente */
+    box-shadow: 0 8px 16px rgba(255, 87, 34, 0.5); /* Sombra más pronunciada */
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #43a047; /* Verde vibrante */
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(67, 160, 71, 0.2);
+    margin: 10px;
+}
+
+.boton:hover {
+    background-color: #388e3c; /* Verde más oscuro al hacer hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px) scale(1.05); /* Levantar y aumentar ligeramente */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 15px;
+    width: calc(25% - 30px); /* Ajusta el ancho para que quepan en una fila */
+    text-align: center;
+    transition: transform 0.3s ease; /* Suave animación de transformación */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al hacer hover */
+}
+
+.footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #1565c0; /* Azul oscuro */
+    color: #ffffff;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 0 0 20px 20px; /* Bordes redondeados en la parte inferior */
+    position: relative; /* Posicionamiento relativo para efectos de fondo */
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Capa de fondo suave */
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%; /* Bordes redondeados */
+    z-index: 0; /* Coloca la capa detrás del texto */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    position: relative; /* Asegura que el texto esté sobre la capa de fondo */
+    z-index: 1; /* Coloca el texto encima de la capa de fondo */
+}
+
+/* Nuevos estilos adicionales para enriquecer el diseño */
+.boton-inicio:active {
+    transform: translateY(1px); /* Efecto al hacer clic */
+    box-shadow: 0 2px 6px rgba(255, 87, 34, 0.5); /* Sombra reducida al hacer clic */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1976d2; /* Color para el título de la tarjeta */
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #555555; /* Color más claro para la descripción */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 30px); /* Dos tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 30px); /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
+.boton-inicio:focus {
+    outline: none; /* Elimina el contorno predeterminado al enfocar */
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.4); /* Sombra de enfoque */
+}
+
+.button-container {
+    display: flex; /* Utiliza flexbox para alinear botones */
+    justify-content: space-around; /* Distribuye botones uniformemente */
+    width: 100%;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.boton-bounce {
+    animation: bounce 2s infinite; /* Efecto de rebote en bucle */
+}
+
+/* Estilo para enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #1976d2; /* Color azul */
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+a:hover {
+    color: #ff5722; /* Cambia a naranja al pasar el ratón */
+}
+
+/* Estilo para formularios */
+.formulario {
+    display: flex;
+    flex-direction: column; /* Estructura vertical para el formulario */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.input-text {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease; /* Transición para el color del borde */
+}
+
+.input-text:focus {
+    border-color: #ff5722; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno */
+}
+
+.btn-submit {
+    background-color: #43a047; /* Verde vibrante */
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición para el fondo */
+}
+
+.btn-submit:hover {
+    background-color: #388e3c; /* Verde más oscuro al hacer hover */
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: red;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de éxito */
+.success-message {
+    color: #f77824;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Estilos para notificaciones */
+.notification {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición para el fondo */
+}
+
+.notification-info {
+    background-color: #e3f2fd; /* Fondo azul claro para información */
+}
+
+.notification-warning {
+    background-color: #fff3cd; /* Fondo amarillo claro para advertencias */
+}
+
+.notification-success {
+    background-color: #d4edda; /* Fondo verde claro para éxitos */
+}
+
+.notification-error {
+    background-color: #f8d7da; /* Fondo rojo claro para errores */
+}

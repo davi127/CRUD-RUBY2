@@ -1,0 +1,41 @@
+<%= form_with(model: prestamo, html: { class: "form-container" }) do |form| %>
+  <% if prestamo.errors.any? %>
+    <div class="error-messages">
+      <h2><%= pluralize(prestamo.errors.count, "error") %> impidieron guardar este préstamo:</h2>
+      <ul>
+        <% prestamo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :usuario_id, "ID del Usuario:", class: "form-label" %>
+    <%= form.text_field :usuario_id, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :libro_id, "ID del Libro:", class: "form-label" %>
+    <%= form.text_field :libro_id, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_prestamo, "Fecha de Préstamo:", class: "form-label" %>
+    <%= form.date_field :fecha_prestamo, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_devolucion, "Fecha de Devolución:", class: "form-label" %>
+    <%= form.date_field :fecha_devolucion, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :estado, "Estado:", class: "form-label" %>
+    <%= form.text_field :estado, class: "form-input" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit "Guardar Préstamo", class: " btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<% content_for :title, "Editing prestamo" %>
+
+<h1>Editar préstamo</h1>
+
+<%= render "form", prestamo: @prestamo %>
+
+<br>
+
+<div>
+  <%= link_to "Ver prestamo", @prestamo, class: "btn" %> |
+  <%= link_to "Ver lista", prestamos_path, class: "btn" %>
+</div>

@@ -1,0 +1,11 @@
+<% content_for :title, "New prestamo" %>
+
+<h1>Nuevo prestamo</h1>
+
+<%= render "form", prestamo: @prestamo %>
+
+<br>
+
+<div>
+  <%= link_to "Ver lista", prestamos_path, class: "boton" %>
+</div>

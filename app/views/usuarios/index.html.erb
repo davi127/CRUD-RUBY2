@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Usuarios" %>
+
+<!-- Botón para volver a la página principal -->
+<div class="back-button-container">
+  <%= link_to "Volver a Inicio", root_path, class: "boton" %>
+</div>
+
+<h1>Usuarios</h1>
+
+<div id="usuarios">
+  <% @usuarios.each do |usuario| %>
+    <%= render usuario %>
+    <p>
+      <%= link_to "Mostrar usuario", usuario, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo usuario", new_usuario_path, class: "boton" %>
